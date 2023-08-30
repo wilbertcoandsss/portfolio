@@ -144,7 +144,7 @@ const Home = () => {
                         <AiOutlineCloseCircle className={styles.closeBtn} onClick={() => setIsFullscreen(!isFullScreen)} />
                     </div>
                     <img
-                        src={`public/certificate/${clickedFilename}`}
+                        src={`/certificate/${clickedFilename}`}
                         className={styles.certificateImageFull}
                     />
                 </div >

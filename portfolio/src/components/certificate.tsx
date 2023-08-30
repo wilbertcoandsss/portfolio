@@ -22,7 +22,7 @@ const Certificates = ({ certif, isFull, setFull, clickedFilename, setClickedFile
             <div className={styles.certificateBox} key={certif}>
                 <div>
                     <img
-                        src={`public/certificate/${certif}`}
+                        src={`/certificate/${certif}`}
                         className={styles.certificateImage}
                     />
                 </div>
