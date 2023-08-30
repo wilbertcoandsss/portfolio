@@ -159,8 +159,8 @@ const Home = () => {
                                 <div>
                                     <h1>Wilbert Coandadiputra</h1>
                                     <IntroText />
-                                    <h3>Full-Time Laboratory Assistant, Coder, And <br></br>
-                                        Junior Computer Science Student</h3>
+                                    {/* <h3>Full-Time Laboratory Assistant, Coder, And <br></br>
+                                        Junior Computer Science Student</h3> */}
                                     <h4>Focus. Learn. Adapt.</h4>
                                 </div>
                                 <div>

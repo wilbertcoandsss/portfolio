@@ -11,7 +11,7 @@ function IntroText() {
     });
 
     return (<>
-        <h1 style={{ fontSize: '40px' }}>
+        <h2 style={{ fontSize: '40px' }}>
             I'm a {' '}
             <span>
                 {text}
@@ -19,7 +19,7 @@ function IntroText() {
             <span>
                 <Cursor />
             </span>
-        </h1>
+        </h2>
     </>)
 }
 

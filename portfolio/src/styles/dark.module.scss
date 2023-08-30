@@ -4,6 +4,25 @@
     // line-height: 29px;
 }
 
+@font-face {
+    font-family: 'SFProMed';
+    src: url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    /* You can also include other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
+@font-face {
+    font-family: 'SFProReg';
+    src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    /* You can also include other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
+
+@font-face {
+    font-family: 'SFProBold';
+    src: url('/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    /* You can also include other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
 $darkBg: #18191a;
 $darkComponent: #242526;
 $darkInput: #3a3b3c;
@@ -98,6 +117,21 @@ $darkInput: #3a3b3c;
 
 .profileIntro h1 {
     font-size: 60px;
+    font-family: 'SFProBold', 'sans-serif';
+}
+
+.profileIntro h3 {
+    font-size: 22px;
+    font-family: 'SFProReg', 'sans-serif';
+}
+
+.profileIntro h4 {
+    font-size: 25px;
+    font-family: 'SFProMed', 'sans-serif';
+}
+
+#portfolio {
+    font-family: 'SFProBold', 'sans-serif';
 }
 
 .profilePic {
@@ -440,21 +474,21 @@ $darkInput: #3a3b3c;
         margin-right: 25px;
     }
 
-    .container{
+    .container {
         width: 65%;
         padding: 10px 50px;
         margin: 0px;
     }
 
-    .timeline::after{
+    .timeline::after {
         left: 4%;
     }
 
-    .profileIntro h1{
+    .profileIntro h1 {
         font-size: 48px;
     }
 
-    .profileIntro{
+    .profileIntro {
         text-align: center;
     }
 }
