@@ -5,13 +5,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { AiFillGithub } from "react-icons/ai";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, darkTheme, setDarkTheme }) => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
-
-    const savedTheme = localStorage.getItem('darkTheme');
-    const [darkTheme, setDarkTheme] = useState(savedTheme === 'dark');
 
     const styles = darkTheme ? darkstyles : lightstyles;
 

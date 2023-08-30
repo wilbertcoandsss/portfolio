@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/light.module.scss"
+import lightstyles from "../styles/light.module.scss";
+import darkstyles from "../styles/dark.module.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { AiOutlineFullscreen } from "react-icons/ai";
@@ -12,11 +13,12 @@ const imageFilenames = [
     'Shopee.jpg'
 ];
 
-const Certificates = ({ certif, isFull, setFull, clickedFilename, setClickedFilename }) => {
+const Certificates = ({ certif, isFull, setFull, clickedFilename, setClickedFilename, darkTheme}) => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
 
+    const styles = darkTheme ? darkstyles : lightstyles
     return (
         <>
             <div className={styles.certificateBox} key={certif}>

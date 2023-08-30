@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
-import styles from "../styles/light.module.scss";
+import React, { useEffect, useState } from "react";
+import lightstyles from "../styles/light.module.scss";
+import darkstyles from "../styles/dark.module.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-const WorkTimeline = () => {
+const WorkTimeline = ({darkTheme}) => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
+
+    const styles = darkTheme ? darkstyles : lightstyles;
 
     return (
         <>

@@ -1,17 +1,55 @@
-*{
+* {
     transition: background-color .8s ease;
+    // letter-spacing: 0.3px;
+    // line-height: 29px;
 }
 
-.mainContainer{
-    background-color: black;
+$darkBg: #18191a;
+$darkComponent: #242526;
+$darkInput: #3a3b3c;
+
+/* Apply animation to all elements */
+.transition-ease-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: easeInAnimation 0.6s ease-in forwards;
+}
+
+@keyframes easeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mainContainer {
+    background-color: $darkBg;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.colContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowContainerPorto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .main {
     margin-left: 300px;
     margin-right: 300px;
-    background-color: black;
+    background-color: $darkBg;
     color: white;
 }
 
@@ -31,6 +69,13 @@
     width: 35px;
     height: 35px;
     color: white;
+    transition: .3s ease;
+}
+
+.iconNavbar:hover {
+    color: #4267B2;
+    transition: .3s ease;
+    transform: scale(1.1);
 }
 
 .lblMode {
@@ -44,7 +89,7 @@
     margin-bottom: 10px;
 }
 
-.profileIntro{
+.profileIntro {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,10 +100,10 @@
     font-size: 60px;
 }
 
-.profilePic{
+.profilePic {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
 }
 
 .modeIcon {
@@ -74,3 +119,346 @@
     transform: rotate(360deg) scale(0);
     transition-delay: .0s;
 }
+
+.projectContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: stretch;
+    padding: 35px;
+    margin-bottom: 35px;
+}
+
+.projectBox {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: $darkInput;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    transition: all .3s ease;
+    text-align: justify;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.projectBox:hover .overlay {
+    height: 100%;
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 25px;
+    opacity: 0.95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.projectBox::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background-color: linear-gradient(315deg, #00ccff, #d400d4);
+    transition: .5s;
+    animation: animate 4s linear infinite;
+}
+
+.genreBox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 25px;
+    padding: 8px;
+    background-color: $darkComponent;
+    ;
+    font-weight: bold;
+    color: white;
+}
+
+.genreBox2 {
+    border-radius: 25px;
+    padding: 8px;
+    background-color: $darkComponent;
+    ;
+    font-weight: bold;
+    color: white;
+}
+
+.projectBox h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 43%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -15.5px;
+    background-color: $darkComponent;
+    border: 4px solid white;
+    top: 82px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.leftContainer {
+    // left: 2.5%;
+}
+
+/* Place the container to the right */
+.rightContainer {
+    left: 50%;
+}
+
+// /* Add arrows to the left container (pointing right) */
+// .leftContainer::before {
+//     content: " ";
+//     height: 0;
+//     position: absolute;
+//     top: 74px;
+//     width: 0;
+//     z-index: 1;
+//     right: 20px;
+//     border: medium solid white;
+//     border-width: 25px 0 25px 25px;
+//     border-color: transparent transparent transparent white;
+// }
+
+// /* Add arrows to the right container (pointing left) */
+// .rightContainer::before {
+//     content: " ";
+//     height: 0;
+//     position: absolute;
+//     top: 74px;
+//     width: 0;
+//     z-index: 1;
+//     left: 22px;
+//     border: medium solid white;
+//     border-width: 25px 25px 25px 0;
+//     border-color: transparent white transparent transparent;
+// }
+
+/* Fix the circle for containers on the right side */
+.rightContainer::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: $darkInput;
+    position: relative;
+    border-radius: 10px;
+    border: 0.5px solid $darkBg;
+    transition: .3s ease;
+}
+
+.content:hover {
+    transition: .3s ease;
+
+}
+
+.certificateImage {
+    width: 160px;
+    height: 110px;
+    border-radius: 10px;
+}
+
+.certificateImageFull {
+    width: 85%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.certificateBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s ease;
+    text-align: justify;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.certificateBox:hover .overlayCertificate {
+    height: 100%;
+}
+
+.overlayCertificate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.certificateContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.overlayFullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .8);
+    flex-direction: column;
+    transition: background-color 0.5s ease;
+}
+
+.closeBtn {
+    position: absolute;
+    color: white;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.closeBtn:hover {
+    color: rgb(193, 193, 193);
+    transition: .3s ease;
+}
+
+@media screen and (max-width: 1550px) {
+    .profileIntro {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 95vh;
+    }
+
+    .container::after {
+        right: -0.5px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .main {
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+
+    .timeline::after {
+        left: 2%;
+    }
+
+    .container::after {
+        left: -0.5px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .rightContainer {
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .main {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .container{
+        width: 65%;
+        padding: 10px 50px;
+        margin: 0px;
+    }
+
+    .timeline::after{
+        left: 4%;
+    }
+
+    .profileIntro h1{
+        font-size: 48px;
+    }
+
+    .profileIntro{
+        text-align: center;
+    }
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 700px) {}

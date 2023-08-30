@@ -174,7 +174,7 @@ const Home = () => {
                             <h1>Portfolio Project</h1>
                             <div className={styles.projectContainer}>
                                 {projects.map((project, index) => (
-                                    <ProjectCard project={project} />
+                                    <ProjectCard project={project} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
                                 ))}
                             </div>
                         </section>
@@ -188,18 +188,18 @@ const Home = () => {
                             <br></br>
                             <h1>Work & Organization Experience</h1>
                             <hr></hr>
-                            <WorkTimeline />
+                            <WorkTimeline darkTheme={darkTheme}/>
                             <br></br>
                             <hr></hr>
                             <h1>Education</h1>
-                            <EduTimeline />
+                            <EduTimeline darkTheme={darkTheme}/>
                             <hr></hr>
                             <h1>Certificates</h1>
                             <br></br>
                             <div className={styles.certificateContainer} data-aos="fade-down">
                                 {imageFilenames.map((certif) => (
                                     <Certificates certif={certif} isFull={isFullScreen} setFull={setIsFullscreen} clickedFilename={clickedFilename}
-                                        setClickedFilename={setClickedFilename} />
+                                        setClickedFilename={setClickedFilename} darkTheme={darkTheme}/>
                                 ))}
                             </div>
                         </section>
