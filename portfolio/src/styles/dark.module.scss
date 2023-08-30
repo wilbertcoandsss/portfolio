@@ -1,0 +1,72 @@
+*{
+    transition: background-color .8s ease;
+}
+
+.mainContainer{
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main {
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: black;
+    color: white;
+}
+
+.iconNavbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.iconNavbarList {
+    display: flex;
+    gap: 20px;
+}
+
+.iconNavbar {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+.lblMode {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profileIntro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+}
+
+.profilePic{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.modeIcon {
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    transition: transform 1s ease;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .5));
+    /* Adding a smooth transition effect */
+}
+
+.rotate90 {
+    transform: rotate(360deg) scale(0);
+    transition-delay: .0s;
+}
