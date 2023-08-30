@@ -18,10 +18,12 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins:wght@400;600;700&display=swap');
+
 * {
     transition: background-color .8s ease;
-    // font-family: 'SFProReg', sans-serif;
     // letter-spacing: 0.3px;
+    font-family: 'Open Sans', sans-serif;
     // line-height: 29px;
 }
 
@@ -126,7 +128,7 @@
     font-family: 'SFProMed', 'sans-serif';
 }
 
-#portfolio{
+#portfolio {
     font-family: 'SFProBold', 'sans-serif';
 }
 
@@ -290,9 +292,7 @@
 }
 
 /* Place the container to the left */
-.leftContainer {
-
-}
+.leftContainer {}
 
 /* Place the container to the right */
 .rightContainer {

@@ -17,9 +17,12 @@
     /* You can also include other font formats (e.g., woff, woff2) for cross-browser compatibility */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins:wght@400;600;700&display=swap');
+
 * {
     transition: background-color .8s ease;
     // letter-spacing: 0.3px;
+    font-family: 'Open Sans', sans-serif;
     // line-height: 29px;
 }
 
