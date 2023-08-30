@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'SFPro';
+    src: url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    /* You can also include other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
 * {
     transition: background-color .8s ease;
+    font-family: 'SFPro', sans-serif;
     // letter-spacing: 0.3px;
     // line-height: 29px;
 }
