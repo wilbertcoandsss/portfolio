@@ -9,7 +9,7 @@ import darkstyles from "../styles/dark.module.scss"
 import { TfiGallery } from "react-icons/tfi";
 import { Link } from "react-scroll";
 
-const Navbar = ({ darkTheme, setDarkTheme, setActiveSection, portfolioRef }) => {
+const Navbar = ({ darkTheme, setDarkTheme }) => {
 
     const handleThemeToggle = () => {
         setDarkTheme(!darkTheme);
@@ -37,7 +37,7 @@ const Navbar = ({ darkTheme, setDarkTheme, setActiveSection, portfolioRef }) => 
         <>
             <div className={styles.iconNavbarContainer}>
                 <div className={styles.iconNavbarList}>
-                    <AiOutlineHome className={styles.iconNavbar} onClick={() => { setActiveSection('home'); }} />
+                    <AiOutlineHome className={styles.iconNavbar} />
                     <Link to="portfolio" spy={true} smooth={true} offset={50} duration={500}>
                         <BsCodeSlash className={styles.iconNavbar} />
                     </Link>

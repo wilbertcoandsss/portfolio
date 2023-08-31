@@ -12,6 +12,7 @@ import WorkTimeline from "../components/worktimeline";
 import Certificates from "../components/certificate";
 import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import ParticleBackground from "../components/particles";
 
 const Home = () => {
 
@@ -31,7 +32,6 @@ const Home = () => {
 
     const savedTheme = localStorage.getItem('darkTheme');
     const [darkTheme, setDarkTheme] = useState(savedTheme === 'dark');
-
 
     const [userDataGithub, setUserDataGithub] = useState([]);
     const [repoData, setRepoData] = useState([]);
@@ -133,9 +133,9 @@ const Home = () => {
         <>
             {/* <div style={{ background: mode === 'dark' ? '#444' : '#fff', height: '100vh' }}>
                 <div style={{ padding: 30 }}>
-                    <h1 style={{ color: mode === 'dark' ? '#fff' : '#2979ff' }}>
-                        {mode === "dark" ? "Dark Mode" : "Light Mode"}
-                    </h1>
+                <h1 style={{ color: mode === 'dark' ? '#fff' : '#2979ff' }}>
+                {mode === "dark" ? "Dark Mode" : "Light Mode"}
+                </h1>
                 </div>
             </div> */}
             {isFullScreen && (
@@ -152,9 +152,10 @@ const Home = () => {
             <div>
                 <div className={styles.mainContainer}>
                     <div className={styles.main}>
+                        <ParticleBackground darkTheme={darkTheme}/>
                         {/* Intro Section */}
                         <section id='home'>
-                            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} setActiveSection={setActiveSection} portfolioRef={portfolioRef} />
+                            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
                             <div className={styles.profileIntro}>
                                 <div>
                                     <h1>Wilbert Coandadiputra</h1>
@@ -188,18 +189,18 @@ const Home = () => {
                             <br></br>
                             <h1>Work & Organization Experience</h1>
                             <hr></hr>
-                            <WorkTimeline darkTheme={darkTheme}/>
+                            <WorkTimeline darkTheme={darkTheme} />
                             <br></br>
                             <hr></hr>
                             <h1>Education</h1>
-                            <EduTimeline darkTheme={darkTheme}/>
+                            <EduTimeline darkTheme={darkTheme} />
                             <hr></hr>
                             <h1>Certificates</h1>
                             <br></br>
                             <div className={styles.certificateContainer} data-aos="fade-down">
                                 {imageFilenames.map((certif) => (
                                     <Certificates certif={certif} isFull={isFullScreen} setFull={setIsFullscreen} clickedFilename={clickedFilename}
-                                        setClickedFilename={setClickedFilename} darkTheme={darkTheme}/>
+                                        setClickedFilename={setClickedFilename} darkTheme={darkTheme} />
                                 ))}
                             </div>
                         </section>
