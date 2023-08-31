@@ -119,10 +119,9 @@ $darkInput: #3a3b3c;
     height: 85vh;
 }
 
-// .profileIntro h1 {
-//     font-size: 60px;
-//     font-family: 'SFProBold', 'sans-serif';
-// }
+.profileIntro h1 {
+    font-size: 60px;
+}
 
 // .profileIntro h3 {
 //     font-size: 22px;
@@ -177,7 +176,7 @@ $darkInput: #3a3b3c;
     gap: 15px;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 350px;
     transition: all .3s ease;
     text-align: justify;
     padding: 20px;
@@ -436,11 +435,12 @@ $darkInput: #3a3b3c;
     transition: .3s ease;
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1050px) {
     .profileIntro {
         flex-direction: column-reverse;
         justify-content: space-around;
         height: 95vh;
+        text-align: center;
     }
 
     .container::after {

@@ -104,7 +104,7 @@ const Home = () => {
         {
             genre: 'game-prog',
             title: 'monster FunTer',
-            description: 'An monster adventure game made with Unity 3D game rendering and C# for logic programming',
+            description: 'An monster adventure game (monster hunter clone) made with Unity 3D game rendering and C# for logic programming',
             genres: ['game', 'unity', 'c#'],
             link: "https://github.com/wilbertcoandsss/monsterFunTer"
         },
@@ -114,7 +114,35 @@ const Home = () => {
             description: 'An hospital management system made with Nextron (NextJS + Electron) and Firebase',
             genres: ['desktop', 'firebase', 'electron', 'nextJS', 'nextron'],
             link: "https://github.com/wilbertcoandsss/siLVoamhospital"
-        }
+        },
+        {
+            genre: 'android-app',
+            title: 'wilkea',
+            description: 'An ikea clone mobile based android app that use LiteSQL for the database',
+            genres: ['mobile', 'android', 'LiteSQL'],
+            link: "https://github.com/wilbertcoandsss/wilkea"
+        },
+        {
+            genre: 'computer-vision',
+            title: 'ATLAS (Advanced Traffic Light Adaptable System)',
+            description: 'An program to object detection using YOLO Algorithm, based on traffic light in everyday use that can have dynamically duration based on the people that want to cross the road.',
+            genres: ['comp-vis', 'AI', 'YOLO', 'Object Detection', 'Darknet'],
+            link: "https://github.com/wilbertcoandsss/ATLAS"
+        },
+        {
+            genre: 'web-app',
+            title: 'adex-legends',
+            description: 'An apex legends clone web app that built by using simple HTML, CSS, and JS for my 2nd semester Human & Computer Interaction Project',
+            genres: ['web', 'html', 'css', 'js'],
+            link: "https://github.com/wilbertcoandsss/adex-legends"
+        },
+        {
+            genre: 'desktop-app',
+            title: 'purpleLaneBookstore',
+            description: 'An dekstop app to library management systems that consists of admin and member that built using JavaFX and MySQL.',
+            genres: ['desktop', 'JavaFX', 'mySQL'],
+            link: "https://github.com/wilbertcoandsss/purpleLaneBookstore"
+        },
     ];
 
     const [isProjectHovered, setIsProjectHovered] = useState(false);
@@ -152,7 +180,7 @@ const Home = () => {
             <div>
                 <div className={styles.mainContainer}>
                     <div className={styles.main}>
-                        <ParticleBackground darkTheme={darkTheme}/>
+                        <ParticleBackground darkTheme={darkTheme} />
                         {/* Intro Section */}
                         <section id='home'>
                             <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
@@ -172,7 +200,8 @@ const Home = () => {
 
                         {/* Portfolio Coding Section */}
                         <section id='portfolio'>
-                            <h1>Portfolio Project</h1>
+                            <h1 style={{ fontSize: '40px' }}>Portfolio Project</h1>
+                            <hr></hr>
                             <div className={styles.projectContainer}>
                                 {projects.map((project, index) => (
                                     <ProjectCard project={project} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />

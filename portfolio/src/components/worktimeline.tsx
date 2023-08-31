@@ -16,23 +16,23 @@ const WorkTimeline = ({darkTheme}) => {
         <>
             <div className={styles.timeline} data-aos="fade-down">
                 <div className={styles.container + ' ' + styles.leftContainer}>
-                    <div className={styles.content} data-aos="fade-up">
+                    <div className={styles.content} data-aos="fade-left">
                         <h3>September 2022 - February 2023</h3>
                         <h1>Full-time Laboratory Assistant</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
                         <hr></hr>
                         <ul>
                             <li>
-                                <h4>Experienced in Teaching 9+ classes with various courses, starts from Data Structures, Database Design, Web Based App Dev, and Big Data Processing</h4>
+                                <h4>Experienced in Teaching 9+ classes with various courses, starts from Database Design, Web Based App Dev, and Big Data Processing</h4>
                             </li>
                             <li>
-                                <h4>Experienced in many more advanced programming languanges, tools, framework and databases, such as Java FX, Apache Hadoop, PySpark, Firebase, PostgreSQL, Unity 3D Game Programming, ReactJS, Nextron (NextJS + Electron), Golang, ASP.NET, Swift, Android, and many more.</h4>
+                                <h4>Experienced in many more advanced programming languanges, tools, framework and databases, such as Apache Hadoop, Firebase, PostgreSQL, Unity, ReactJS, Golang, ASP.NET, Swift, Android, and many more.</h4>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.rightContainer}>
-                    <div className={styles.content} data-aos="fade-up">
+                    <div className={styles.content} data-aos="fade-right">
                         <h3>September 2022 - February 2023</h3>
                         <h1>Part-time Laboratory Assistant</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
@@ -48,7 +48,7 @@ const WorkTimeline = ({darkTheme}) => {
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.leftContainer}>
-                    <div className={styles.content} data-aos="fade-up">
+                    <div className={styles.content} data-aos="fade-left">
                         <h3>Maret 2022 - January 2023</h3>
                         <h1>Activist - BINUS Computer Science Student Association</h1>
                         <h4>BINUS University</h4>
@@ -64,7 +64,7 @@ const WorkTimeline = ({darkTheme}) => {
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.rightContainer}>
-                    <div className={styles.content} data-aos="fade-up">
+                    <div className={styles.content} data-aos="fade-right">
                         <h3>July 2021 - July 2022</h3>
                         <h1>Part-time Promotions Team</h1>
                         <h4>Marketing Team @BINUS University Alam Sutra</h4>
