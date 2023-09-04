@@ -8,6 +8,7 @@ import lightstyles from "../styles/light.module.scss"
 import darkstyles from "../styles/dark.module.scss"
 import { TfiGallery } from "react-icons/tfi";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ darkTheme, setDarkTheme }) => {
 
@@ -33,6 +34,8 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
     //     scrollToSection(portfolioRef); // Call scrollToSection with the portfolio ref
     // };
 
+    const navigate = useNavigate();
+
     return (
         <>
             <div className={styles.iconNavbarContainer}>
@@ -44,9 +47,8 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
                     <Link to="resume" spy={true} smooth={true} offset={50} duration={500}>
                         <RiBillLine className={styles.iconNavbar} />
                     </Link>
-                    <Link to="gallery" spy={true} smooth={true} offset={50} duration={500}>
-                        <TfiGallery className={styles.iconNavbar} />
-                    </Link>
+                    {/* <TfiGallery className={styles.iconNavbar} onClick={() => navigate('/portfolio')}/> */}
+                    <TfiGallery className={styles.iconNavbar}/>
                 </div>
                 <div >
                     <label className={styles.lblMode} onClick={handleLabelClick}>

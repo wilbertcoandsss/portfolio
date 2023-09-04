@@ -190,6 +190,30 @@ $darkInput: #3a3b3c;
     transform: scale(1.1);
 }
 
+.preloader {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s, display 0.5s;
+    color: white;
+}
+
+.preloader span {
+    color: white;
+}
+
 .overlay {
     position: absolute;
     bottom: 0;
@@ -201,7 +225,7 @@ $darkInput: #3a3b3c;
     height: 0;
     transition: .5s ease;
     border-radius: 25px;
-    opacity: 0.95;
+    opacity: 0.85;
     display: flex;
     justify-content: center;
     align-items: center;

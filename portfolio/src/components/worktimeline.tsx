@@ -16,8 +16,8 @@ const WorkTimeline = ({darkTheme}) => {
         <>
             <div className={styles.timeline} data-aos="fade-down">
                 <div className={styles.container + ' ' + styles.leftContainer}>
-                    <div className={styles.content} data-aos="fade-left">
-                        <h3>September 2022 - February 2023</h3>
+                    <div className={styles.content} data-aos="fade-down-left">
+                        <h3>Februaru 2023 - Present</h3>
                         <h1>Full-time Laboratory Assistant</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
                         <hr></hr>
@@ -32,7 +32,7 @@ const WorkTimeline = ({darkTheme}) => {
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.rightContainer}>
-                    <div className={styles.content} data-aos="fade-right">
+                    <div className={styles.content} data-aos="fade-up-right">
                         <h3>September 2022 - February 2023</h3>
                         <h1>Part-time Laboratory Assistant</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
@@ -48,7 +48,7 @@ const WorkTimeline = ({darkTheme}) => {
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.leftContainer}>
-                    <div className={styles.content} data-aos="fade-left">
+                    <div className={styles.content} data-aos="fade-down-left">
                         <h3>Maret 2022 - January 2023</h3>
                         <h1>Activist - BINUS Computer Science Student Association</h1>
                         <h4>BINUS University</h4>
@@ -64,7 +64,7 @@ const WorkTimeline = ({darkTheme}) => {
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.rightContainer}>
-                    <div className={styles.content} data-aos="fade-right">
+                    <div className={styles.content} data-aos="fade-up-right">
                         <h3>July 2021 - July 2022</h3>
                         <h1>Part-time Promotions Team</h1>
                         <h4>Marketing Team @BINUS University Alam Sutra</h4>

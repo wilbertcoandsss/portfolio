@@ -20,6 +20,7 @@ const EduTimeline = ({ darkTheme }) => {
                         <h3>2021 - 2025 (Expected)</h3>
                         <h1>Bina Nusantara University</h1>
                         <h3>Computer Science Major</h3>
+                        <h4>Current GPA: 3.96/4.00 (82 credits)</h4>
                     </div>
                 </div>
                 <div className={styles.container + ' ' + styles.rightContainer}>

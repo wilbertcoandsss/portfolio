@@ -250,6 +250,12 @@
     padding: 10px 40px;
     position: relative;
     width: 43%;
+    transition: .3s ease;
+}
+
+.container:hover {
+    transition: .3s ease;
+    transform: scale(1.1);
 }
 
 /* The circles on the timeline */
@@ -272,6 +278,27 @@
 /* Place the container to the right */
 .rightContainer {
     left: 50%;
+}
+
+.slideIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform-origin: bottom;
+}
+
+
+.slideOut {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform-origin: top;
 }
 
 // /* Add arrows to the left container (pointing right) */
@@ -313,6 +340,7 @@
     background-color: rgb(238, 238, 238);
     position: relative;
     border-radius: 10px;
+    transition: .3s ease;
 }
 
 .content:hover {
@@ -401,6 +429,46 @@
     transition: .3s ease;
 }
 
+.preloader{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s, display 0.5s;
+}
+
+.preloader span{
+    color: black;
+}
+
+.fadeOut{
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.preloader .textContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    color: white;
+}
+
 
 
 @media screen and (max-width: 1050px) {
@@ -437,6 +505,10 @@
     .rightContainer {
         left: 0;
     }
+
+    .certificateImageFull {
+        height: 40%;
+    }
 }
 
 
@@ -462,6 +534,10 @@
 
     .profileIntro {
         text-align: center;
+    }
+
+    .certificateImageFull {
+        height: 30%;
     }
 }
 

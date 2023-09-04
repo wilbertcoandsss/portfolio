@@ -14,7 +14,7 @@ export default function ParticleBackground({darkTheme}) {
     };
     
     const particlesConfig = darkTheme ? darkParticlesConfig : lightParticlesConfig
-    
+
     return (
         <>
             <Particles
@@ -22,6 +22,8 @@ export default function ParticleBackground({darkTheme}) {
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
+                width="0"
+                height="0"
             >
             </Particles>
         </>

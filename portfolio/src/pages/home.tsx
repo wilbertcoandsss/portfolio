@@ -13,6 +13,8 @@ import Certificates from "../components/certificate";
 import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import ParticleBackground from "../components/particles";
+import AnimatedPage from "../components/transition";
+import Preloader from "../components/preloader";
 
 const Home = () => {
 
@@ -36,25 +38,24 @@ const Home = () => {
     const [userDataGithub, setUserDataGithub] = useState([]);
     const [repoData, setRepoData] = useState([]);
 
-    const [mode, setMode] = useState("");
+    // const [mode, setMode] = useState("");
 
-    useEffect(() => {
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', event => {
-                const colorScheme = event.matches ? "dark" : "light";
-                console.log(colorScheme); // "dark" or "light"
-                setMode(colorScheme);
-            });
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setMode("dark");
-        }
-        else {
-            setMode("light");
-        }
+    // useEffect(() => {
+    //     window.matchMedia('(prefers-color-scheme: dark)')
+    //         .addEventListener('change', event => {
+    //             const colorScheme = event.matches ? "dark" : "light";
+    //             setMode(colorScheme);
+    //         });
+    //     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //         setMode("dark");
+    //     }
+    //     else {
+    //         setMode("light");
+    //     }
 
-    }, []);
+    // }, []);
 
-    console.log(mode);
+    // console.log(mode);
     // useEffect(() => {
     //     fetch('https://api.github.com/users/wilbertcoandsss')
     //         .then(res => res.json())
@@ -157,86 +158,102 @@ const Home = () => {
     const [isFullScreen, setIsFullscreen] = useState(false);
     const [clickedFilename, setClickedFilename] = useState("");
 
+
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsVisible(false);
+        }, 1800);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
+
     return (
-        <>
-            {/* <div style={{ background: mode === 'dark' ? '#444' : '#fff', height: '100vh' }}>
-                <div style={{ padding: 30 }}>
-                <h1 style={{ color: mode === 'dark' ? '#fff' : '#2979ff' }}>
-                {mode === "dark" ? "Dark Mode" : "Light Mode"}
-                </h1>
-                </div>
-            </div> */}
-            {isFullScreen && (
-                <div className={styles.overlayFullscreen} data-aos="fade-up">
-                    <div>
-                        <AiOutlineCloseCircle className={styles.closeBtn} onClick={() => setIsFullscreen(!isFullScreen)} />
-                    </div>
-                    <img
-                        src={`/certificate/${clickedFilename}`}
-                        className={styles.certificateImageFull}
-                    />
-                </div >
-            )}
-            <div>
-                <div className={styles.mainContainer}>
-                    <div className={styles.main}>
-                        <ParticleBackground darkTheme={darkTheme} />
-                        {/* Intro Section */}
-                        <section id='home'>
-                            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-                            <div className={styles.profileIntro}>
-                                <div>
-                                    <h1>Wilbert Coandadiputra</h1>
-                                    <IntroText />
-                                    {/* <h3>Full-Time Laboratory Assistant, Coder, And <br></br>
-                                        Junior Computer Science Student</h3> */}
-                                    <h4>Focus. Learn. Adapt.</h4>
-                                </div>
-                                <div>
-                                    <img className={styles.profilePic} src="/pp.jpg"></img>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* Portfolio Coding Section */}
-                        <section id='portfolio'>
-                            <h1 style={{ fontSize: '40px' }}>Portfolio Project</h1>
-                            <hr></hr>
-                            <div className={styles.projectContainer}>
-                                {projects.map((project, index) => (
-                                    <ProjectCard project={project} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-                                ))}
-                            </div>
-                        </section>
-
-                        <br></br>
-                        <br></br>
-
-                        {/* Educiation Timeline */}
-                        <section id='resume'>
-                            <h1>Resume</h1>
-                            <br></br>
-                            <h1>Work & Organization Experience</h1>
-                            <hr></hr>
-                            <WorkTimeline darkTheme={darkTheme} />
-                            <br></br>
-                            <hr></hr>
-                            <h1>Education</h1>
-                            <EduTimeline darkTheme={darkTheme} />
-                            <hr></hr>
-                            <h1>Certificates</h1>
-                            <br></br>
-                            <div className={styles.certificateContainer} data-aos="fade-down">
-                                {imageFilenames.map((certif) => (
-                                    <Certificates certif={certif} isFull={isFullScreen} setFull={setIsFullscreen} clickedFilename={clickedFilename}
-                                        setClickedFilename={setClickedFilename} darkTheme={darkTheme} />
-                                ))}
-                            </div>
-                        </section>
+        <div>
+            <Preloader darkTheme={darkTheme} />
+            <AnimatedPage>
+                <ParticleBackground darkTheme={darkTheme} />
+                    {/* <div style={{ background: mode === 'dark' ? '#444' : '#fff', height: '100vh' }}>
+                        <div style={{ padding: 30 }}>
+                            <h1 style={{ color: mode === 'dark' ? '#fff' : '#2979ff' }}>
+                                {mode === "dark" ? "Dark Mode" : "Light Mode"}
+                            </h1>
+                        </div>
+                    </div> */}
+                {isFullScreen && (
+                    <div className={styles.overlayFullscreen} data-aos="fade-up">
+                        <div>
+                            <AiOutlineCloseCircle className={styles.closeBtn} onClick={() => setIsFullscreen(!isFullScreen)} />
+                        </div>
+                        <img
+                            src={`/certificate/${clickedFilename}`}
+                            className={styles.certificateImageFull}
+                        />
                     </div >
-                </div >
-            </div>
-        </>
+                )}
+                <div data-aos="fade-up" data-aos-duration="2500">
+                    <div className={styles.mainContainer}>
+                        <div className={styles.main}>
+                            {/* Intro Section */}
+                            <section id='home'>
+                                <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+                                <div className={styles.profileIntro}>
+                                    <div>
+                                        <h1>Wilbert Coandadiputra</h1>
+                                        <IntroText />
+                                        {/* <h3>Full-Time Laboratory Assistant, Coder, And <br></br>
+                                        Junior Computer Science Student</h3> */}
+                                        <h4>Focus. Learn. Adapt.</h4>
+                                    </div>
+                                    <div>
+                                        <img className={styles.profilePic} src="/pp.jpg"></img>
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Portfolio Coding Section */}
+                            <section id='portfolio'>
+                                <h1 style={{ fontSize: '40px' }}>Portfolio Project</h1>
+                                <hr></hr>
+                                <div className={styles.projectContainer}>
+                                    {projects.map((project, index) => (
+                                        <ProjectCard project={project} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+                                    ))}
+                                </div>
+                            </section>
+
+                            <br></br>
+                            <br></br>
+
+                            {/* Educiation Timeline */}
+                            <section id='resume'>
+                                <h1>Resume</h1>
+                                <br></br>
+                                <h1>Work & Organization Experience</h1>
+                                <hr></hr>
+                                <WorkTimeline darkTheme={darkTheme} />
+                                <br></br>
+                                <hr></hr>
+                                <h1>Education</h1>
+                                <EduTimeline darkTheme={darkTheme} />
+                                <hr></hr>
+                                <h1>Certificates</h1>
+                                <br></br>
+                                <div className={styles.certificateContainer} data-aos="fade-down">
+                                    {imageFilenames.map((certif) => (
+                                        <Certificates certif={certif} isFull={isFullScreen} setFull={setIsFullscreen} clickedFilename={clickedFilename}
+                                            setClickedFilename={setClickedFilename} darkTheme={darkTheme} />
+                                    ))}
+                                </div>
+                            </section>
+                        </div >
+                    </div >
+                </div>
+            </AnimatedPage>
+        </div >
     )
 }
 

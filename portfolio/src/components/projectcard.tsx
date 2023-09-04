@@ -16,7 +16,7 @@ const ProjectCard = ({ project, darkTheme, setDarkTheme }) => {
 
     return (
         <>
-            <div className={styles.projectBox} key={project} data-aos="fade-up"
+            <div className={styles.projectBox} key={project} data-aos="zoom-in-down"
                 onMouseEnter={() => setIsProjectHovered(true)}
                 onMouseLeave={() => setIsProjectHovered(false)}>
                 <>
