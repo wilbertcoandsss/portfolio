@@ -278,7 +278,9 @@
     border-radius: 25px;
     padding: 8px;
     background-color: #4267B2;
-    ;
+    
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: bold;
     color: white;
 }
@@ -563,6 +565,22 @@
     .container::after {
         right: -0.5px;
     }
+
+    .video {
+        width: 700px;
+        height: 410px;
+    }
+
+    .coverProject {
+        width: 400px;
+        height: 200px;
+    }
+
+    .codePreview {
+        width: 800px;
+        height: 750px;
+    }
+
 }
 
 @media screen and (max-width: 910px) {
@@ -589,6 +607,17 @@
 
     .certificateImageFull {
         height: 40%;
+    }
+    
+    .video {
+        border: none;
+        width: 500px;
+        height: 310px;
+    }
+
+    .codePreview {
+        width: 800px;
+        height: 750px;
     }
 }
 
@@ -619,6 +648,22 @@
 
     .certificateImageFull {
         height: 30%;
+    }
+
+    .video {
+        border: none;
+        width: 300px;
+        height: 110px;
+    }
+
+    .coverProject {
+        width: 350px;
+        height: 150px;
+    }
+
+    .codePreview {
+        width: 350px;
+        height: 300px;
     }
 }
 
