@@ -17,7 +17,7 @@ function App() {
           <AnimatePresence mode='wait'>
             <Routes>
               <Route path="/" element={<Home />}></Route>
-              <Route path="/portfolio" element={<Portfolio />}></Route>
+              <Route path="/portfolio/:id" element={<Portfolio />}></Route>
             </Routes>
           </AnimatePresence>
         </div>

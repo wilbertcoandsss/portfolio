@@ -3,7 +3,7 @@ const particlesConfigDark =
     autoPlay: true,
     background: {
         color: {
-            value: "#000"
+            value: "#171717"
         },
         image: "",
         position: "",

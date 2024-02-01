@@ -93,6 +93,7 @@ $darkInput: #3a3b3c;
     height: 35px;
     color: white;
     transition: .3s ease;
+    cursor: pointer;
 }
 
 .iconNavbar:hover {
@@ -260,15 +261,34 @@ $darkInput: #3a3b3c;
     right: 15px;
     border-radius: 25px;
     padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $darkComponent;
     ;
     font-weight: bold;
     color: white;
 }
 
+
+.date {
+    text-align: center;
+    color: silver;
+}
+
+.projectDocs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
 .genreBox2 {
     border-radius: 25px;
-    padding: 8px;
+    padding: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
     background-color: $darkComponent;
     ;
     font-weight: bold;
@@ -459,6 +479,51 @@ $darkInput: #3a3b3c;
     transition: .3s ease;
 }
 
+.video {
+    border: none;
+    width: 900px;
+    height: 510px;
+}
+
+.coverProject {
+    width: 850px;
+    height: 500px;
+}
+
+.codePreview {
+    width: 1320px;
+    height: 800px;
+    margin: 10px;
+}
+
+.githubLink {
+    transition: .3s ease;
+}
+
+.githubLink h4{
+    transition: .3s ease;
+    font-size: 18px;
+}
+
+.githubLink:hover h4{
+    transition: .3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.githubIcon {
+    width: 50px;
+    height: 30px;
+    transition: .3s ease;
+}
+
+
+.githubLink:hover .githubIcon{
+    transform: scale(1.1);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1050px) {
     .profileIntro {
         flex-direction: column-reverse;
@@ -470,6 +535,23 @@ $darkInput: #3a3b3c;
     .container::after {
         right: -0.5px;
     }
+
+    .video {
+        width: 700px;
+        height: 410px;
+    }
+
+    .coverProject {
+        width: 400px;
+        height: 200px;
+    }
+
+    .codePreview {
+        width: 800px;
+        height: 750px;
+    }
+
+
 }
 
 @media screen and (max-width: 910px) {
@@ -492,6 +574,17 @@ $darkInput: #3a3b3c;
 
     .rightContainer {
         left: 0;
+    }
+
+    .video {
+        border: none;
+        width: 500px;
+        height: 310px;
+    }
+
+    .codePreview {
+        width: 800px;
+        height: 750px;
     }
 }
 
@@ -519,8 +612,20 @@ $darkInput: #3a3b3c;
     .profileIntro {
         text-align: center;
     }
+
+    .video {
+        border: none;
+        width: 300px;
+        height: 110px;
+    }
+
+    .coverProject {
+        width: 350px;
+        height: 150px;
+    }
+
+    .codePreview {
+        width: 350px;
+        height: 300px;
+    }
 }
-
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 700px) {}

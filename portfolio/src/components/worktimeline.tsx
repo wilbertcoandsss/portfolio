@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-const WorkTimeline = ({darkTheme}) => {
+const WorkTimeline = ({ darkTheme }) => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -15,9 +15,22 @@ const WorkTimeline = ({darkTheme}) => {
     return (
         <>
             <div className={styles.timeline} data-aos="fade-down">
+                <div className={styles.container + ' ' + styles.rightContainer}>
+                    <div className={styles.content} data-aos="fade-up-right">
+                        <h3>January 2024 - Present</h3>
+                        <h1>Subject Coordinator</h1>
+                        <h4>Laboratory Center @BINUS University Alam Sutra</h4>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <h4>Have responbility to manage courses on the software laboratory, such as manage cases, correction, documentation validation, sending documents, and many more</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div className={styles.container + ' ' + styles.leftContainer}>
                     <div className={styles.content} data-aos="fade-down-left">
-                        <h3>Februaru 2023 - Present</h3>
+                        <h3>February 2023 - January 2024</h3>
                         <h1>Full-time Laboratory Assistant</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
                         <hr></hr>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import lightstyles from "../styles/light.module.scss";
 import darkstyles from "../styles/dark.module.scss";
+import { MdOpenInNew } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { AiFillGithub } from "react-icons/ai";
@@ -33,12 +34,12 @@ const ProjectCard = ({ project, darkTheme, setDarkTheme }) => {
                             </div>
                         ))}
                     </div>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.overlay}>
+                    <a href={`/portfolio/${project.id}`} rel="noopener noreferrer" className={styles.overlay} onClick={() => localStorage.setItem('lastClickedProject', project.title)}>
                         <div>
-                            <AiFillGithub style={{ width: '50px', height: '50px', color: 'white' }} />
+                            <MdOpenInNew style={{ width: '50px', height: '50px', color: 'white' }} />
                         </div>
                         <div>
-                            <h4 className={styles.text}>Open on Github!</h4>
+                            <h4 className={styles.text}>See more details!</h4>
                         </div>
                     </a>
                 </>

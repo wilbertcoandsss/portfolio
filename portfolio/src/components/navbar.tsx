@@ -9,8 +9,9 @@ import darkstyles from "../styles/dark.module.scss"
 import { TfiGallery } from "react-icons/tfi";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
-const Navbar = ({ darkTheme, setDarkTheme }) => {
+const Navbar = ({ darkTheme, setDarkTheme, isDetails }) => {
 
     const handleThemeToggle = () => {
         setDarkTheme(!darkTheme);
@@ -40,15 +41,22 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
         <>
             <div className={styles.iconNavbarContainer}>
                 <div className={styles.iconNavbarList}>
-                    <AiOutlineHome className={styles.iconNavbar} />
-                    <Link to="portfolio" spy={true} smooth={true} offset={50} duration={500}>
-                        <BsCodeSlash className={styles.iconNavbar} />
-                    </Link>
-                    <Link to="resume" spy={true} smooth={true} offset={50} duration={500}>
-                        <RiBillLine className={styles.iconNavbar} />
-                    </Link>
-                    {/* <TfiGallery className={styles.iconNavbar} onClick={() => navigate('/portfolio')}/> */}
-                    <TfiGallery className={styles.iconNavbar}/>
+                    {isDetails ? (<>
+                        <IoIosArrowBack className={styles.iconNavbar} onClick={() => {
+                            localStorage.setItem('isBack', 'true');
+                            navigate('/');
+                        }} />
+                    </>) : (<>
+                        <AiOutlineHome className={styles.iconNavbar} />
+                        <Link to="portfolio" spy={true} smooth={true} offset={50} duration={500}>
+                            <BsCodeSlash className={styles.iconNavbar} />
+                        </Link>
+                        <Link to="resume" spy={true} smooth={true} offset={50} duration={500}>
+                            <RiBillLine className={styles.iconNavbar} />
+                        </Link>
+                        {/* <TfiGallery className={styles.iconNavbar} onClick={() => navigate('/portfolio')}/> */}
+                        <TfiGallery className={styles.iconNavbar} />
+                    </>)}
                 </div>
                 <div >
                     <label className={styles.lblMode} onClick={handleLabelClick}>
