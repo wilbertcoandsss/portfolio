@@ -15,15 +15,28 @@ const WorkTimeline = ({ darkTheme }) => {
     return (
         <>
             <div className={styles.timeline} data-aos="fade-down">
-                <div className={styles.container + ' ' + styles.rightContainer}>
+            <div className={styles.container + ' ' + styles.leftContainer}>
                     <div className={styles.content} data-aos="fade-up-right">
-                        <h3>January 2024 - Present</h3>
+                        <h3>February 2024 - Present</h3>
                         <h1>Subject Coordinator</h1>
                         <h4>Laboratory Center @BINUS University Alam Sutra</h4>
                         <hr></hr>
                         <ul>
                             <li>
                                 <h4>Have responbility to manage courses on the software laboratory, such as manage cases, correction, documentation validation, sending documents, and many more</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className={styles.container + ' ' + styles.rightContainer}>
+                    <div className={styles.content} data-aos="fade-up-right">
+                        <h3>February 2024 - Present</h3>
+                        <h1>Application Developer - Internship</h1>
+                        <h4>Lab Computing @BINUS University Kemanggisan</h4>
+                        <hr></hr>
+                        <ul>
+                            <li>
+                                <h4>Have responsbility to design requirements and create an application that can help things in BINUS University, specifically on Lab Computing for Computer Science Student.</h4>
                             </li>
                         </ul>
                     </div>

@@ -169,7 +169,7 @@ const Home = () => {
                                         <h4>Focus. Learn. Adapt.</h4>
                                     </div>
                                     <div>
-                                        <img className={styles.profilePic} src="/pp3.png"></img>
+                                        <img className={styles.profilePic} src="/pp4.png"></img>
                                     </div>
                                 </div>
                             </section>
